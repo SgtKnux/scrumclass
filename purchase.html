@@ -1,0 +1,26 @@
+<!-- Below is a simple form that might be found in "purchase.html" -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Beanbag Purchase Page</title>
+        <style>
+            /* Add CSS styling here */
+        </style>
+    </head>
+    <body>
+        <h1>Beanbag Purchase Page</h1>
+        <form action="submit_payment.php" method="POST"> <!-- This will need to be handled by a backend system -->
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="address">Shipping Address:</label><br>
+            <input type="text" id="address" name="address" required><br>
+            <label for="payment">Payment Method:</label><br>
+            <select id="payment" name="payment">
+                <option value="venmo">Venmo</option>
+                <option value="paypal">PayPal</option>
+                <option value="credit">Credit Card</option>
+            </select><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
