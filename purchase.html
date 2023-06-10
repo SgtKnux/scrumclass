@@ -1,26 +1,81 @@
-<!-- Below is a simple form that might be found in "purchase.html" -->
 <!DOCTYPE html>
 <html>
     <head>
         <title>Beanbag Purchase Page</title>
         <style>
-            /* Add CSS styling here */
+            body {
+                background-color: #FFDAB9; /*Peach Puff color*/
+                font-family: Arial, sans-serif;
+            }
+            h1 {
+                color: #8B0000; /*Dark Red color*/
+            }
+            .product {
+                background-color: #FFFF00; /*Yellow color*/
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            .form-element {
+                margin-bottom: 20px;
+            }
         </style>
     </head>
     <body>
+        <center>
         <h1>Beanbag Purchase Page</h1>
+
+        <div class="product">
+            <img src="beans.jpg" alt="Beanbag chair">
+            <h2>Price: $49.99</h2>
+            <p>Tax: $4.99</p>
+            <p>Shipping: $12.50 per beanbag</p>
+        </div>
+
         <form action="submit_payment.php" method="POST"> <!-- This will need to be handled by a backend system -->
-            <label for="name">Full Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="address">Shipping Address:</label><br>
-            <input type="text" id="address" name="address" required><br>
-            <label for="payment">Payment Method:</label><br>
-            <select id="payment" name="payment">
-                <option value="venmo">Venmo</option>
-                <option value="paypal">PayPal</option>
-                <option value="credit">Credit Card</option>
-            </select><br>
+            <div class="form-element">
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+            </div>
+            
+            <div class="form-element">
+                <label for="address">Shipping Address:</label><br>
+                <input type="text" id="address" name="address" required><br>
+            </div>
+
+            <div class="form-element">
+                <label for="color">Color:</label><br>
+                <select id="color" name="color">
+                    <option value="pink">Pink</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                </select><br>
+            </div>
+
+            <div class="form-element">
+                <label for="quantity">Quantity:</label><br>
+                <select id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <!-- add as many as needed -->
+                </select><br>
+            </div>
+
+            <div class="form-element">
+                <label for="payment">Payment Method:</label><br>
+                <select id="payment" name="payment">
+                    <option value="venmo">Venmo</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="credit">Credit Card</option>
+                </select><br>
+            </div>
+
+            <div class="form-element">
+                <h3>Total: <!-- A backend system or JavaScript will need to populate this with the total --> </h3>
+            </div>
+
             <input type="submit" value="Submit">
         </form>
+        </center>
     </body>
 </html>
