@@ -1,55 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>The Beans: Fun & Comfortable Beanbag Chairs</title>
-        <style>
-            body {
-                background-color: #FFDAB9; /*Peach Puff color*/
-                font-family: Arial, sans-serif;
-            }
-            h1 {
-                color: #8B0000; /*Dark Red color*/
-            }
-            h2, h3 {
-                color: #008000; /*Green color*/
-            }
-            .product {
-                background-color: #FFFF00; /*Yellow color*/
-                padding: 20px;
-                margin-bottom: 20px;
-            }
-            .testimonial {
-                background-color: #ADD8E6; /*Light Blue color*/
-                padding: 20px;
-                margin-bottom: 20px;
-            }
-            .disclaimer {
-                font-size: 10px;
-                color: #696969; /*Dim Gray color*/
-            }
-        </style>
-    </head>
-    <body>
-        <center>
-        <h1>Welcome to The Beans!</h1>
-        <p>"Where comfort meets fun!"</p>
+<head>
+    <style>
+        body {
+            background-image: url('Background.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: white;
 
-        <div class="product">
-            <h2>Our Product</h2>
-            <img src="beans.jpg" alt="Beanbag chair">
-            <p>Our beanbag chairs are designed to provide the ultimate comfort experience. With their plush, soft texture and variety of vibrant colors, they're the perfect addition to any room. Not only do they make a fun and cozy spot for kids to read, play, or just relax, they're also loved by adults who appreciate a bit of nostalgia and whimsy.</p>
-            <p style="font-size:23px; "><a href="purchase.html">Buy Now!</a></p>
-            </div>
-
-        <div class="testimonial">
-            <h3>What Our Customers Say</h3>
-            <p>"My kids absolutely love their beanbag chairs from The Beans! They're so comfortable and colorful. It's their favorite spot in the house!" - Jane D.</p>
-            <p>"These beanbags are the best! They're so cozy and add a fun touch to our living room. I can't recommend The Beans enough!" - Mike P.</p>
-        </div>
-
-        <div class="disclaimer">
-            <p>All rights reserved. The Beans© 2023. All images, branding, and content are the property of The Beans. While we do our best to ensure product quality and customer satisfaction, we are not responsible for any damage or dissatisfaction after purchase.</p>
-        </div>
-        </center>
-    </body>
-</html>
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	    webkit-text-stroke: 1px black;
+        }
+        p {
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	    font-size: 18px;
+	    text-align: center;
+            
+        }
+        ul {
+            color: blue;
+	    font-size: 17px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .attractions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+        }
+        .attractions li {
+            margin: 5px;
+            font-weight: bold;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 20%;
+            height: auto;
+        }
+        .video-container {
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Tampa: Where Fun and Sun Are Always in Season.</h1>
+    <p><b>Tampa is known for being a city for all ages and remains a welcoming place for those seeking fun, opportunity, and a chance to try new things.</b></p>
+<div class="video-container">
+        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/ZRWY0nKK9O9?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+            <img style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+        </a>
+        <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/ZRWY0nKK9O9/embed" width="640" height="360"></iframe>
+    </div>
+<p><b>Home of beautiful Gulf Coast beaches, world class theme parks, three professional sports teams, and year-round hot, humid weather</p></b>
+    <u><ul class="attractions">
+        <li>Beaches</li>
+        <li>Casinos</li>
+        <li>Busch Gardens</li>
+        <li>Zoo</li>
+        <li>Aquarium</li>
+        <li>Professional Sports</li>
+        <li>Hiking/Biking</li>
+        <li>Charming & Historic</li>
+    </ul></u>
+    <div class="image-container">
+        <img src="Sports.png" alt="Sports">
+        <img src="City.jpeg" alt="City">
+        <img src="Beach.jpeg" alt="Beach">
+        <img src="Club.jpeg" alt="Club">
+        <img src="Map.jpeg" alt="Map">
+    </div>
+</body>
+</html
