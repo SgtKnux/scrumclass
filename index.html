@@ -1,93 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-d2IpzEG7l13vzjZ6FcYW8z0nxoKw8d3sP9bbhco3qNUs2nqr6Mk5UkuIgPqYZ9Nm" crossorigin="anonymous">
     <style>
         body {
             background-image: url('Background.png');
             background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100vh;
+            background-size: 125%;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 2rem;
+        }
         h1 {
             color: white;
-
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-	    webkit-text-stroke: 1px black;
+            -webkit-text-stroke: 1px black;
+            width: 100%;
+            text-align: center;
+        }
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            max-width: 90%; /* control the max-width of the columns */
+            margin: auto; /* center the columns */
         }
         p {
-            color: white;
+            color: black
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-	    font-size: 18px;
-	    text-align: center;
-            
+            font-size: 22px;
+            text-align: center;
         }
-        ul {
+        .column {
+            flex: 1;
+            padding: 1rem;
+            max-width: 30%; /* control the max-width of each column */
+        }
+        ul.attractions {
             color: blue;
-	    font-size: 17px;
+            font-size: 25px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-        .attractions {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             list-style: none;
+            padding: 0;
         }
-        .attractions li {
+        ul.attractions li {
             margin: 5px;
             font-weight: bold;
         }
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .image-container img {
-            width: 20%;
-            height: auto;
+        .image {
+            width: 100%; 
+            height: auto; 
+            max-width: 500px;
+            max-height: 500px;
+            object-fit: cover;
+            margin-bottom: 1rem;
         }
         .video-container {
             position: relative;
-            width: fit-content;
-            height: fit-content;
-            margin-bottom: 20px;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            margin-bottom: 1rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    
-    <h1>Tampa: Where Fun and Sun Are Always in Season.</h1>
-    <p><b>Tampa is known for being a city for all ages and remains a welcoming place for those seeking fun, opportunity, and a chance to try new things.</b></p>
-<div class="video-container">
-        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/ZRWY0nKK9O9?utm_source=embed&utm_medium=embed&utm_campaign=watch">
-            <img style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
-        </a>
-        <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/ZRWY0nKK9O9/embed" width="640" height="360"></iframe>
-    </div>
-<p><b>Home of beautiful Gulf Coast beaches, world class theme parks, three professional sports teams, and year-round hot, humid weather</p></b>
-    <u><ul class="attractions">
-        <li>Beaches</li>
-        <li>Casinos</li>
-        <li>Busch Gardens</li>
-        <li>Zoo</li>
-        <li>Aquarium</li>
-        <li>Professional Sports</li>
-        <li>Hiking/Biking</li>
-        <li>Charming & Historic</li>
-    </ul></u>
-    <div class="image-container">
-        <img src="Sports.png" alt="Sports">
-        <img src="City.jpeg" alt="City">
-        <img src="Beach.png" alt="Beach">
-        <img src="Club.jpeg" alt="Club">
-        <img src="Map.jpeg" alt="Map">
+    <div class="container">
+        <h1>Tampa: Where Fun and Sun Are Always in Season.</h1>
+        <div class="columns">
+            <div class="column">
+                <img class="image" src="Club.jpeg" alt="Club">
+                <img class="image" src="Beach.jpeg" alt="Beach">
+                <img class="image" src="Map.jpeg" alt="Map">
+            </div>
+            <div class="column">
+                <p><b>Tampa is known for being a city for all ages and remains a welcoming place for those seeking fun, opportunity, and a chance to try new things.<br><br><br><br><br><br><br><br><br></b></p>
+                <div class="video-container">
+                    <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/ZRWY0nKK9O9?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+                        <img style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+                    </a>
+                    <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/ZRWY0nKK9O9/embed"></iframe>
+                </div>
+                <p><b><br><br><br>Home of beautiful Gulf Coast beaches, world class theme parks, three professional sports teams, and year-round hot, humid weather<br><br><br></b></p>
+                <img class="image" src="Sports.png" alt="Sports">
+            </div>
+            <div class="column">
+                <img class="image" src="City.jpeg" alt="City">
+                <ul class="attractions">
+                    <li>Beaches</li>
+                    <li>Casinos</li>
+                    <li>Busch Gardens</li>
+                    <li>Zoo</li>
+                    <li>Aquarium</li>
+                    <li>Professional Sports</li>
+                    <li>Hiking/Biking</li>
+                    <li>Charming & Historic</li>
+                </ul>
+<br><br><br><br><br><br>
+                <h2>Leave a review</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-tiktok fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-</html
+</html>
